@@ -19,14 +19,14 @@ https://www.tooplate.com/view/2148-bistro-elegance
 	border: none;
 }
 .headerText{
-	color: green;
+	color: rgb(255, 75, 10);
 }
 
 body {
 	font-family: 'Arial', sans-serif;
 	line-height: 1.6;
 	color: 6257B3;
-	background: #fff;
+	background: rgb(255, 255, 255);
 	overflow-x: hidden;
 }
 
@@ -43,7 +43,7 @@ nav {
 }
 
 .nav-container {
-	max-width: 1200px;
+width: auto;
 	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
@@ -395,11 +395,16 @@ h2::after {
     max-width: 700px;
     margin: 40px auto;
     padding: 30px;
-    background-color: #d7c8c8;
+    background-color: #ffffff;
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
+}
+
+.menu-item-big-content h3{
+ font-size: 30px;
+ color: #5a5b5b;
 }
 
 .menu-item-image-big {
@@ -418,15 +423,6 @@ h2::after {
     color: #2c3e50;
 }
 
-.value-title {
-    font-weight: 700;
-    font-size: 18px;
-    margin-top: 20px;
-    margin-bottom: 5px;
-    color: #0AADFF;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
 
 .menu-item-big-content p {
     margin-bottom: 10px;
@@ -437,7 +433,27 @@ h2::after {
     margin-bottom: 18px;
 }
 
+.value_container{
+flex-direction: row;
+}
 
+.value-title {
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    color: #0AADFF;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.value-logo{
+	width: 30px;
+	height: 100%;
+	display: absolute;
+	float: left;
+	margin-right: 10px;
+	padding: 0;
+}
 
 .menu-grid {
 	display: grid;
@@ -499,22 +515,27 @@ h2::after {
 }
 
 .menu-item h3 {
-	color: #6257B3;
+	color: #6F63C4;
 	margin-bottom: 1rem;
 	font-size: 1.5rem;
 }
 
 .menu-item p {
-	color: #9f99cd;
+	color: #666464;
 	margin-bottom: 1rem;
+	font-weight: 600;
+	text-align: center;
 }
 
 .quote-section {
-  background: linear-gradient(135deg, #1e1e2f, #2c3e50);
+  background: #6F63C4;
   padding: 80px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  max-width: none;
+  margin: 0;
 }
 
 .quote-container {
@@ -540,10 +561,15 @@ font-family: 'Georgia', serif;
 .skills {
 	font-size: 1.2rem;
 	font-weight: bold;
-	color: #FF4B0A;
+	color: #5b5a5a;
 	margin-top: auto;
 	margin-bottom: 1rem;
+	text-align: center;
 }
+
+/* .major {
+font-weight: 100;
+} */
 
 /* .details-btn {
 	background: none;
@@ -643,7 +669,7 @@ font-family: 'Georgia', serif;
 	border-radius: 20px;
 	padding: 3rem;
 	margin: 3rem 0;
-	display: grid;
+	display: flex;
 	grid-template-columns: 1fr 1fr;
 	gap: 3rem;
 	align-items: center;
@@ -651,12 +677,13 @@ font-family: 'Georgia', serif;
 
 .reservation-left {
 	width: 100%;
+	
 }
 
 .reservation-right {
 	width: 100%;
 	height: 100%;
-	min-height: 500px;
+	min-height: 200px;
 	position: relative;
 	border-radius: 15px;
 	overflow: hidden;
@@ -866,4 +893,14 @@ footer {
 	.reservation-form {
 		grid-template-columns: 1fr;
 	}
+
+}
+
+#Conclusie .reservation {
+    justify-content: center;
+}
+
+#Conclusie .reservation-left {
+    text-align: center;
+    max-width: 800px;
 }
