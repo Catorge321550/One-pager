@@ -5,6 +5,11 @@
     const navToggle = document.querySelector('.nav-toggle');
     const navMenu = document.querySelector('.nav-menu');
     const navLinks = document.querySelectorAll('.nav-menu a');
+    const modal = document.getElementById("myModal");
+    const span = document.getElementsByClassName("close")[0];
+    const Images = document.getElementsByTagName('img');
+    const modalImg = document.getElementById("img01");
+    const captionText = document.getElementById("caption");
 
     // Mobile menu
     navToggle.addEventListener('click', () => {
@@ -97,4 +102,15 @@
     document.querySelectorAll('.value-row').forEach((row, i) => {
         row.style.transitionDelay = `${i * 0.06}s`;
     });
+
+    //Zoom function for persona's && insights
+    span.onclick = function() {modal.style.display = "none";}
+    for (var i = 0; i < Images.length; i++) {
+        Images[i].onclick = function(){
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        modalImg.alt = this.alt;
+        captionText.innerHTML = this.nextElementSibling.innerHTML;
+        }
+    }
 })();
