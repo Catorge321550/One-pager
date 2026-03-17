@@ -692,6 +692,14 @@ section {
   height: 150px;
 }
 
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
 @-webkit-keyframes zoom {
   from {transform:scale(0)} 
   to {transform:scale(1)}
