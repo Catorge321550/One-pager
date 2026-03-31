@@ -476,6 +476,30 @@ section {
     line-height: 1.6;
 }
 
+/* ===== SPRINT SUBSECTION HEADER ===== */
+
+.sprint-sub {
+    margin-bottom: 2rem;
+}
+
+.sprint-sub .section-label {
+    display: inline-block;
+    margin-bottom: 0.4rem;
+}
+
+.sprint-sub h3 {
+    font-family: var(--font-display);
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    color: var(--purple-d);
+    margin-bottom: 0.75rem;
+}
+
+.sprint-sub p {
+    color: var(--muted);
+    font-size: 1.05rem;
+    max-width: 680px;
+}
+
 /* ===== SPRINT SECTION ===== */
 
 .sprint-section {
