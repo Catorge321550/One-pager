@@ -685,35 +685,34 @@ section {
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  z-index: 2000; /* Sit on top */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  background-color: rgba(0,0,0,0.95); /* Black w/ opacity */
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.modal.active {
+  display: flex;
 }
 
 /* Modal Content (image) */
 .modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
+  width: auto;
+  height: auto;
+  max-width: 95vw;
+  max-height: 95vh;
+  object-fit: contain;
 }
 
 /* Caption of Modal Image */
 #caption {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  text-align: center;
-  color: #ccc;
-  padding: 10px 0;
-  height: 150px;
+  display: none;
 }
 
 /* Add Animation */
@@ -736,20 +735,21 @@ section {
 
 /* The Close Button */
 .close {
-  position: absolute;
-  top: 75px;
-  right: 55px;
+  position: fixed;
+  top: 20px;
+  right: 30px;
   color: #f1f1f1;
   font-size: 40px;
   font-weight: bold;
   transition: 0.3s;
+  cursor: pointer;
+  z-index: 2001;
 }
 
 .close:hover,
 .close:focus {
   color: #bbb;
   text-decoration: none;
-  cursor: pointer;
 }
 
 /* Responsive Columns */
@@ -878,6 +878,27 @@ footer {
 
 /* ===== RESPONSIVE ===== */
 
+@media (max-width: 1024px) {
+    section {
+        padding: 5rem 1.75rem;
+    }
+
+    .insight-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .insight-grid > :last-child:nth-child(odd) {
+        grid-column: auto;
+        width: 100%;
+    }
+
+    .insight-grid-last {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 @media (max-width: 900px) {
     .team-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -909,11 +930,72 @@ footer {
         height: 1px;
         margin: 1.5rem 0;
     }
+
+    .situatie-grid {
+        gap: 2rem;
+    }
+
+    .close {
+        top: 15px;
+        right: 15px;
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 3.5rem 1rem;
+    }
+
+    .hero {
+        min-height: 400px;
+    }
+
+    .section-header h2 {
+        font-size: clamp(1.5rem, 3vw, 2rem);
+    }
+
+    .conclusion-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .situatie-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .situatie-text h3 {
+        font-size: 2rem;
+    }
+
+    .insight-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .pompompurin {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .close {
+        top: 12px;
+        right: 12px;
+        font-size: 28px;
+    }
 }
 
 @media (max-width: 640px) {
     section {
-        padding: 4rem 1.25rem;
+        padding: 2.5rem 1rem;
+    }
+
+    .nav-inner {
+        padding: 0.7rem 1.25rem;
+    }
+
+    .nav-logo {
+        font-size: 1.1rem;
     }
 
     .nav-menu {
@@ -939,11 +1021,19 @@ footer {
     .nav-menu a {
         display: block;
         padding: 0.75rem 1rem;
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
 
     .nav-toggle {
         display: flex;
+    }
+
+    .hero-title {
+        font-size: clamp(2rem, 6vw, 3.5rem);
+    }
+
+    .hero-cycle-text {
+        font-size: clamp(0.85rem, 1.5vw, 1rem);
     }
 
     .team-grid {
@@ -953,7 +1043,7 @@ footer {
 
     .member-card {
         display: grid;
-        grid-template-columns: 100px 1fr;
+        grid-template-columns: 80px 1fr;
     }
 
     .member-img-wrap {
@@ -963,22 +1053,62 @@ footer {
 
     .member-body {
         text-align: left;
-        padding: 1rem 1.25rem;
+        padding: 0.75rem 1rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
 
+    .member-body h3 {
+        font-size: 1rem;
+    }
+
+    .member-body p {
+        font-size: 0.8rem;
+    }
+
     .sprint-card {
-        padding: 1.75rem;
+        padding: 1.5rem 1rem;
     }
 
     .sprint-card-number {
-        font-size: 2.2rem;
+        font-size: 1.8rem;
+    }
+
+    .sprint-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .sprint-card p {
+        font-size: 0.9rem;
+    }
+
+    .values-list h3 {
+        font-size: 1.25rem;
+    }
+
+    .value-row {
+        padding: 0.75rem 0;
     }
 
     .conclusion-card {
-        padding: 2rem 1.5rem;
+        padding: 1.5rem 1rem;
+    }
+
+    .conclusion-card h2 {
+        font-size: 1.5rem;
+    }
+
+    .conclusion-card p {
+        font-size: 0.95rem;
+    }
+
+    .situatie-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .situatie-text p {
+        font-size: 0.9rem;
     }
 
     .footer-inner {
@@ -988,5 +1118,53 @@ footer {
 
     .footer-contact {
         text-align: center;
+    }
+
+    .footer-brand {
+        font-size: 1rem;
+    }
+
+    .close {
+        top: 10px;
+        right: 10px;
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        padding: 2rem 0.75rem;
+    }
+
+    .section-header {
+        margin-bottom: 2rem;
+    }
+
+    .hero-title {
+        font-size: clamp(1.5rem, 5vw, 2.5rem);
+    }
+
+    .member-card {
+        grid-template-columns: 70px 1fr;
+    }
+
+    .conclusion-card {
+        padding: 1.25rem 0.75rem;
+    }
+
+    .sprint-cards {
+        gap: 1rem;
+    }
+
+    .values-list {
+        padding: 1.5rem 1rem 1.5rem 0;
+    }
+
+    .situatie-grid {
+        gap: 1rem;
+    }
+
+    .insight-grid {
+        gap: 0.75rem;
     }
 }

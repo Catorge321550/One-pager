@@ -104,13 +104,30 @@
     });
 
     //Zoom function for persona's && insights
-    span.onclick = function() {modal.style.display = "none";}
+    span.onclick = function() {
+        modal.classList.remove("active");
+    }
+    
+    // Close modal when clicking outside the image
+    modal.onclick = function(event) {
+        if (event.target === modal) {
+            modal.classList.remove("active");
+        }
+    }
+    
+    // Close modal on ESC key
+    document.addEventListener('keydown', function(event) {
+        if (event.key === "Escape") {
+            modal.classList.remove("active");
+        }
+    });
+    
     for (var i = 0; i < Images.length; i++) {
-        Images[i].onclick = function(){
-        modal.style.display = "block";
-        modalImg.src = this.src;
-        modalImg.alt = this.alt;
-        captionText.innerHTML = this.nextElementSibling.innerHTML;
+        Images[i].onclick = function(e){
+            e.stopPropagation();
+            modal.classList.add("active");
+            modalImg.src = this.src;
+            modalImg.alt = this.alt;
         }
     }
 })();
