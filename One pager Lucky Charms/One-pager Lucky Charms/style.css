@@ -1168,3 +1168,89 @@ footer {
         gap: 0.75rem;
     }
 }
+
+/* Ontwerpvraag highlight card */
+.ontwerpvraag-card {
+    border-left: 4px solid var(--orange);
+    background: color-mix(in srgb, var(--orange) 5%, white);
+}
+
+.ontwerpvraag-card h2 {
+    font-size: clamp(1rem, 2.2vw, 1.35rem);
+    line-height: 1.55;
+    font-style: italic;
+    color: var(--slate);
+}
+
+/* Prototype subheadings */
+.proto-subhead {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--purple);
+    margin: 0;
+    padding-bottom: 0.25rem;
+    border-bottom: 2px solid color-mix(in srgb, var(--purple) 20%, transparent);
+}
+
+/* Situatie plaatjes met caption */
+.situatie-plaatjes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.situatie-plaatje-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.situatie-plaatje-caption {
+    font-size: 0.875rem;
+    color: var(--muted);
+    line-height: 1.55;
+    margin: 0;
+    font-style: italic;
+}
+
+@media (max-width: 600px) {
+    .situatie-plaatjes {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Placeholder image blocks */
+.placeholder-img-wrap {
+    display: flex;
+}
+
+.placeholder-img {
+    flex: 1;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    border: 2px dashed var(--purple);
+    border-radius: var(--radius);
+    background: color-mix(in srgb, var(--purple) 6%, transparent);
+    color: var(--purple);
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.placeholder-img p {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--slate);
+}
+
+.placeholder-img p span {
+    font-size: 0.8rem;
+    opacity: 0.55;
+    font-style: italic;
+}
