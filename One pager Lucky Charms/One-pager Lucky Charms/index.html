@@ -496,7 +496,7 @@
             <h2>Prototypen</h2>
 
             <h3 class="proto-subhead">Schetsen van ideeën</h3>
-<div><img src="images/Brainstorm_prototype.png"></div>>
+<div><img src="images/Brainstorm_prototype.png"></div>
 
             <h3 class="proto-subhead" style="margin-top: 2rem;">Uiteindelijke eerste versie</h3>
             <div style="margin-top: 1rem; text-align: center;">
@@ -506,6 +506,45 @@
             <h3 class="proto-subhead" style="margin-top: 2.5rem;">Interactief audioboek — probeer het zelf</h3>
                         <p style="margin-bottom: 1.5rem;">Ons prototype is fysiek. We hebben een digitale versie gemaakt, zodat je het kunt proberen. Gebruik de gekleurde knoppen rechts om de audio af te spelen. Blader door het boek met de pijlknoppen.</p>
 
+        </div>
+
+        <div style="margin-top: 2rem;"></div>
+
+        <div class="conclusion-card">
+            <span class="section-label">Vervolgstappen</span>
+            <h2>Conclusie</h2>
+            <p>In Sprint 3 hebben we onze focus verder aangescherpt. Door de probe met Efsun en de bezoeken aan de bibliotheek kregen we een veel concreter beeld van de belevingswereld van laaggeletterde ouders. Voorlezen bleek telkens terug te komen als een cruciaal maar onderschat moment, zowel voor de taalontwikkeling van het kind als voor het zelfvertrouwen van de ouder. Dit inzicht leidde tot een aangescherpte ontwerpvraag, gericht op ouders met peuters van 2–4 jaar, en daarbij ook een nieuwe versie van de huidige en gewenste situatie. Daarnaast hebben we eerste schetsen gemaakt en zijn we begonnen met het uitwerken van een eerste versie van ons prototype.</p>
+            <h2>Vervolgstappen</h2>
+            <p>In de volgende sprint richten we ons op het <strong>verder uitwerken en testen van het eerste prototype met de doelgroep</strong>. Om de aanname <b>"de doelgroep vindt het fijner als er losse moeilijkere woorden worden voorgelezen integenstelling tot zinnen of hele pagina's"</b> willen we proben met twee versies van het prototype. Een waarbij <b>moeilijke woorden</b> voorgelezen worden en een waarbij de <b>gehele tekst</b> wordt voorgelezen. We willen zo vroeg mogelijk echte feedback ophalen van laaggeletterde ouders, zodat we ons concept kunnen aanscherpen op basis van hun ervaringen en behoeften.<br> Ook hebben we een <b>vraag</b> waarbij de <b>partners</b> ons misschien bij kunnen helpen. Kunnen we beter <b>foucussen</b> op ondersteuning bij <b>lange woorden</b>, of woorden met <b>moeilijke klank combinaties</b>, zoals "au" "oe" en "eu". Dit kunnen we natuurlijk ook nog proben, maar het zou fijn zijn er al enig idee van te hebben als we de probe daarvoor ingaan!</p>
+            <img src="images/sprint4/Planningsprint4.png" alt="Roadmap Sprint 4" style="width: 100%; border-radius: var(--radius); margin-top: 1.5rem;">
+        </div>
+    </section>
+
+    <!-- Sprint 4 -->
+    <section id="sprint4" class="sprint-section">
+        <div class="section-header">
+            <span class="section-label">Sprint 4</span>
+            <h2>Prototype &amp; Testen</h2>
+        </div>
+
+        <!-- aanpak -->
+        <div class="conclusion-card">
+            <h2>Aanpak</h2>
+<p>Deze Sprint richtte wij ons onder andere op het <b>maken</b> van onze <b>prototype</b> en <b>feedback</b> hierbij ophalen. We hebben het volgende uitgevoerd:</p>
+                <ul>
+                <li>Naast onze paper prototype werkte we ook aan het <b>technische aspect</b> en een <b>digitale versie.</b></li>
+                <li>Deelgenomen aan het <b>Smart and Social Fest</b>, waar we waardevolle <b>feedback</b> hebben kunnen ontvangen.</li>
+                <li>Een Python script om woorden te rangschikken.</li>
+                <li>Planningen gemaakt voor onderdelen <b>rondom het concept</b>, zoals een website die gebruikt kan worden voor marketing.</li>
+                <li>Instanties benaderd om mee te <b>testen</b> maar ondertussen ook met personen uit <b>onze omgeving</b> getest.</li>
+            </ul>
+        </div>
+
+    <!-- Een digitale versie -->
+    <section class="conclusion-section">
+        <div class="conclusion-card">
+            <h2>Een digitale versie</h2>
+            <p>Doordat onze prototype <b>fysiek</b> is kan het een <b>uitdaging</b> zijn om het op verschillende locaties <b>tegelijk</b> te testen en/of te laten zien. Hierdoor is er een <b>digitale versie</b> ontwikkeld, zodat het <b>makkelijk gecommuniceerd</b> kan worden naar bijvoorbeeld partners, zonder <b>afhankelijk</b> te zijn van de fysieke prototype.</p>
             <!-- AUDIOBOEK WIDGET -->
             <style>
               .audioboek-widget {
@@ -620,7 +659,6 @@
                 .audioboek-widget .ab-audio-panel { flex-direction: row; }
               }
             </style>
-
             <div class="audioboek-widget">
               <div class="ab-viewer">
                 <div>
@@ -645,7 +683,6 @@
                 <button class="ab-stop-btn" onclick="abStop()">■ Stop</button>
               </div>
             </div>
-
             <audio id="ab-audio"></audio>
             <script>
               const abPages  = ['audioboek/Blad 1.png','audioboek/Blad 2 nieuw.png','audioboek/Blad 3 nieuw.png','audioboek/Blad 4.png'];
@@ -686,21 +723,83 @@
               }
               abEl.addEventListener('ended', abStop);
             </script>
-            <!-- EINDE AUDIOBOEK WIDGET -->
-        </div>
+            <!-- EINDE AUDIOBOEK WIDGET -->        </div>
+    </section>
 
-        <div style="margin-top: 2rem;"></div>
-
-        <div class="conclusion-card">
-            <span class="section-label">Vervolgstappen</span>
-            <h2>Conclusie</h2>
-            <p>In Sprint 3 hebben we onze focus verder aangescherpt. Door de probe met Efsun en de bezoeken aan de bibliotheek kregen we een veel concreter beeld van de belevingswereld van laaggeletterde ouders. Voorlezen bleek telkens terug te komen als een cruciaal maar onderschat moment, zowel voor de taalontwikkeling van het kind als voor het zelfvertrouwen van de ouder. Dit inzicht leidde tot een aangescherpte ontwerpvraag, gericht op ouders met peuters van 2–4 jaar, en daarbij ook een nieuwe versie van de huidige en gewenste situatie. Daarnaast hebben we eerste schetsen gemaakt en zijn we begonnen met het uitwerken van een eerste versie van ons prototype.</p>
-            <h2>Vervolgstappen</h2>
-            <p>In de volgende sprint richten we ons op het <strong>verder uitwerken en testen van het eerste prototype met de doelgroep</strong>. Om de aanname <b>"de doelgroep vindt het fijner als er losse moeilijkere woorden worden voorgelezen integenstelling tot zinnen of hele pagina's"</b> willen we proben met twee versies van het prototype. Een waarbij <b>moeilijke woorden</b> voorgelezen worden en een waarbij de <b>gehele tekst</b> wordt voorgelezen. We willen zo vroeg mogelijk echte feedback ophalen van laaggeletterde ouders, zodat we ons concept kunnen aanscherpen op basis van hun ervaringen en behoeften.<br> Ook hebben we een <b>vraag</b> waarbij de <b>partners</b> ons misschien bij kunnen helpen. Kunnen we beter <b>foucussen</b> op ondersteuning bij <b>lange woorden</b>, of woorden met <b>moeilijke klank combinaties</b>, zoals "au" "oe" en "eu". Dit kunnen we natuurlijk ook nog proben, maar het zou fijn zijn er al enig idee van te hebben als we de probe daarvoor ingaan!</p>
-            <img src="images/sprint4roadmap.png" alt="Roadmap Sprint 4" style="width: 100%; border-radius: var(--radius); margin-top: 1.5rem;">
+    <!-- Smart and Social Fest -->
+        <div class="values-section">
+            <div class="values-photo-wrap">
+                <img src="images/sprint4/smartandsocial.png" alt="ideabox and prototype" class="values-photo">
+            </div>
+            <div class="values-list">
+                <h3>Smart and Social Fest</h3>
+                <p>Tijdens het Smart and Social Fest hebben we de eerste versie van onze prototype aan verschillende studenten en docenten kunnnen presenteren en  hebben we ook feedback of ideeen kunnen verzamelen met onze ideeendoos.</p>
+                <p>Feedback dat we hebben meegenomen:</p>
+                <ul>
+                    <li>Een paar mensen herkenden kenmerken van ons product op de huidige markt. Deze hebben we onderzocht en nogmaals gekeken naar wat ons product anders maakt dan deze voorbeelden.</li>
+                    <li>Er waren ideeën over gebruik van lichtjes op de pagina's zelf. Hier hebben we naar gekeken, maar het maakt de pagina's te dik dus zijn we er voor nu van weg gestapt.</li>
+                    <li>Er was een idee dat er inplaats van meerdere druk knoppen een enkele draaiknop gebruikt kan worden. Hier hebben we naar gekeken maar uiteindelijk hebben we er niet voor gekozen omdat het het gebruik van het boek ingewikkelder maakt.</li>
+                </ul>
+            </div>
         </div>
     </section>
 
+<!-- python script dusan -->
+            <div class="conclusion-card">
+            <h2>Hoe moeilijk is elk woord?</h2>
+            <p>Doordat we bezig zijn met een voorleesboek voor <b>laaggeletterde ouders</b> houden we ook rekening met de moeilijkheidgraad van elk woord. De tekts mag best een klein beetje uitdagend zijn, maar niet dat de drempel te hoog wordt. Met dit programma kunnen we precies zien welke woorden in de tekst volgens ons onderzoek waarschijnlijk als moeilijk ervaren worden.</p>
+<div><img src="images/sprint4/results_python_script.png"></div>
+            </div>
+
+<!-- jorge -->
+<!-- Het prototype functioneel maken -->
+    <section class="conclusion-section">
+        <div class="conclusion-card">
+            <h2>Het prototype functioneel maken</h2>
+            <p></p>
+            <img src="images/sprint4/arduino.png">
+        </div>
+    </section>
+
+<!-- Testresultaten tot nu toe -->
+    <section class="conclusion-section">
+        <div class="conclusion-card">
+            <h2>Testresultaten tot nu toe</h2>
+            <p></p>
+            <img src="images/sprint4/...">
+        </div>
+    </section>
+
+<!-- Een start met de nieuwe versie -->
+    <section class="conclusion-section">
+        <div class="conclusion-card">
+            <h2>Een start met de nieuwe versie</h2>
+            <p>Met de resultaten en feedback dat we al binnen hadden, zijn we aan de slag gegaan met een nieuwe versie.
+            <ul>
+            <li>We hebben gebrainstormed over het nieuwe verhaal en het onderwerp is nu een huisartsbezoek zodat het ook een informerende aspect kan bieden aan de ouder. (stukje onderzoek hier toevoegen of alleen benoemen in de presentatie?).</li>
+            <li>De tekst rijmt nu omdat dit een positieve invloed heeft op de taalontwikkeling.</li>
+            <li>Versie met knoppen die verschillende vormpjes heeft ipv alleen verschillende kleuren om ook rekening te houden met kleurenblindheid.</li>
+            <li>Een naam voor het concept; Hardop.</li>
+            </ul>
+            </p>
+            <p>Naast het prototype zelf zijn we ook gestart met het maken van onderdelen rondom het boek zelf. Zoals een website om het product mee te marketen en techniek rondom uitbreiding, zoals een nieuwe verhaal in de kaft kunnen klikken.</p>
+            <img src="images/sprint4/...">
+        </div>
+    </section>
+
+
+<!-- Vervolgstappen -->
+    <section class="conclusion-section">
+        <div class="conclusion-card">
+            <h2>Vervolgstappen</h2>
+            <p>De laatste sprint gaan we ons richten om alle testresultaten in het nieuwe prototype verwerkt te hebben, waardoor we gericht onze testmomenten kunnen uitvoeren. Hierna kunnen we de laatste aanpassingen verwerken voor het prototype die we laten op de eindexpo.</p>
+            <p>Verder gaan we ook verder met de website voor Hardop, zodat we het ook duidelijk naar partners kunnen communiceren.</p>
+            <img src="images/sprint4/...">
+        </div>
+    </section>
+
+    <!-- closing sprint 4 section -->
+</section> 
     <!-- Footer -->
     <footer id="contact">
         <div class="footer-inner">
